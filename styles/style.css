@@ -139,3 +139,17 @@ main {
     font-family: cursive;
     text-align: center;
 }
+
+
+img {
+    width: 100px;
+    height: auto;
+}
+
+/* .bottom {
+    display: block;
+    position: absolute;
+    margin-top: 50%;
+    margin-right: 0%;
+    height: 100px;
+} */
