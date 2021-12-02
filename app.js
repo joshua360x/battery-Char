@@ -10,9 +10,9 @@ const reportEl = document.getElementById('report');
 const chatchphrasesEl = document.getElementById('chatchphrases');
 const catchphraseInput = document.getElementById('catchphrase-input');
 const catchphraseButton = document.getElementById('catchphrase-button');
-const headCountEL = document.getElementById('headCount');
+// const headCountEL = document.getElementById('headCount');
 
-let sloganArray = []
+let sloganArray = [];
 let headCount = 0;
 let middleCount = 0;
 let bottomCount = 0;
@@ -21,9 +21,9 @@ let bottomCount = 0;
 
 headDropdown.addEventListener('change', () => {
     // get the value of the head dropdown
-    let headChoosen = headDropdown.value
+    let headChoosen = headDropdown.value;
     // increment the head change count state
-    headCount++
+    headCount++;
     // update the dom for the head
     headEl.style.backgroundImage = `url(./assets/${headChoosen}.png)`;
     // let sourceCHild = document.createElement('img');
@@ -40,9 +40,9 @@ headDropdown.addEventListener('change', () => {
 
 middleDropdown.addEventListener('change', () => {
     // get the value of the middle dropdown
-    let middleChoosen = middleDropdown.value
+    let middleChoosen = middleDropdown.value;
     // increment the middle change count state
-    middleCount++
+    middleCount++;
     // update the dom for the middle
     middleEl.style.backgroundImage = `url(./assets/${middleChoosen}.png)`;
     // let sourceCHild = document.createElement('img');
@@ -57,9 +57,9 @@ middleDropdown.addEventListener('change', () => {
 
 bottomDropdown.addEventListener('change', () => {
     // get the value of the bottom dropdown
-    const bottomChoosen = bottomDropdown.value
+    const bottomChoosen = bottomDropdown.value;
     // increment the bottom change count state
-    bottomCount++
+    bottomCount++;
     // update the dom for the bottom
     bottomEl.style.backgroundImage = `url(./assets/${bottomChoosen}1.png)`;
     // let sourceCHild = document.createElement('img');
@@ -98,7 +98,7 @@ function displayStats() {
 function displayCatchphrases() {
     // clear out the DOM for the currently displayed catchphrases
     catchphraseInput.value = '';
-    clearingCatchPhrase()
+    clearingCatchPhrase();
     // loop through each catchphrase in state
     // and for each catchphrase
     for (let slogan of sloganArray) {
@@ -108,9 +108,9 @@ function displayCatchphrases() {
         p.textContent = slogan;
 
         // and append that HTML element to the cleared-out DOM
-        chatchphrasesEl.append(p)
+        chatchphrasesEl.append(p);
         // console.log(typeof chatchphrasesEl)
-        console.log(sloganArray);
+        // console.log(sloganArray);
        
         // sloganArray = []
     }
@@ -118,6 +118,6 @@ function displayCatchphrases() {
 
 function clearingCatchPhrase(){ 
     while (chatchphrasesEl.firstChild) {
-        chatchphrasesEl.removeChild(chatchphrasesEl.firstChild)
+        chatchphrasesEl.removeChild(chatchphrasesEl.firstChild);
     }
 }
